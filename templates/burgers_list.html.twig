@@ -1,16 +1,15 @@
+
 {% extends 'base.html.twig' %}
-{% block title %}Burgers{% endblock %}
-        
+
+{% block title %}Liste des Burgers{% endblock %}
+
 {% block body %}
-    <h1>Liste des burgers</h1>
-    <p>voici une listes composer de nos différents burgers</p>
+    <h1>Nos Burgers 🍔</h1>
+
     <ul>
-        <li> 
-            <img src="smash_burger.png" alt="Smash burger"> 
-            Smash burger
-        </li>
-        <li>burger briocher</li>
-        <li>Chiken avocado</li>
-        <li>Paule Burger</li>
+        <li><a href="{{ path('burger_show', { id: 1 }) }}">Cheeseburger</a></li>
+        <li><a href="{{ path('burger_show', { id: 2 }) }}">Bacon Burger</a></li>
+        <li><a href="{{ path('burger_show', { id: 3 }) }}">Vegan Burger</a></li>
     </ul>
+
 {% endblock %}
